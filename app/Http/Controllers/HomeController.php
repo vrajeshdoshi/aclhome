@@ -14,6 +14,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('admin');
     }
 
     /**
@@ -25,4 +26,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /*Create the function for the pages that can be accessed only by admin over here*/
 }
